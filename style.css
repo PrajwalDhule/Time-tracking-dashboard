@@ -1,0 +1,101 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --long: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --self-care: hsl(43, 84%, 65%);
+
+    --vd-blue: hsl(226, 43%, 10%);
+    --d-blue: hsl(235, 46%, 20%);
+    --ds-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+    --fs-title: 18px;
+  }
+
+.screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    gap: 1.5rem;
+    width: min(95%, 70rem);
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'six'
+    'seven';
+    padding-block: 2rem;
+    margin-inline: auto;
+}
+
+.all{
+    border-radius: 10px;
+}
+
+.all:nth-child(1){
+    grid-area: one;
+}
+.all:nth-child(2){
+    grid-area: two;
+}
+.all:nth-child(3){
+    grid-area: three;
+}
+.all:nth-child(4){
+    grid-area: four;
+}
+.all:nth-child(5){
+    grid-area: five;
+}
+.all:nth-child(6){
+    grid-area: six;
+}
+.all:nth-child(7){
+    grid-area: seven;
+}
+
+.jeremy-img{
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.long{
+    background-color: var(--d-blue);
+}
+
+.long-top{
+    height: 60%;
+    background-color: var(--long);
+    border-radius: 10px;
+}
+.long-bottom{
+    background-color: var(--d-blue);
+    margin-bottom: 0;
+    height: 40%;
+}
+
+.daily{
+    margin-top: 0;
+}
+
+@media (min-width: 40em) {
+    .container {
+        grid-template-areas:
+        "one two three four"
+        "one five six seven";
+    }
+  }

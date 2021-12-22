@@ -168,10 +168,20 @@ body{
     margin-left: 1.2rem;
 }
 
-.long-bottom p{
+.long-bottom a{
     margin-left: 1.2rem;
-    margin-bottom: 0;
+    /* margin-bottom: 0;
+    margin-top: 1.2rem; */
     color: var(--ds-blue);
+    text-decoration: none;
+}
+
+.daily{
+    margin-bottom: 1.2rem;
+}
+
+.monthly{
+    margin-top: 1.2rem;
 }
 
 .jeremy-text{
@@ -230,7 +240,7 @@ body{
     margin-top: 0;
 }
 
-.long-bottom p:hover{
+.long-bottom a:hover{
     color: white;
     cursor: pointer;
 }
@@ -243,6 +253,10 @@ body{
 .short-bottom:hover{
     background-color: var(--ds-blue);
     cursor: pointer;
+}
+
+.long-bottom a:active{
+    color: white;
 }
 
 @media (max-width: 375px){

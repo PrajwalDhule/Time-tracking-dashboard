@@ -277,6 +277,10 @@ body{
     color: var(--pale-blue);
 }
 
+.long-bottom a:nth-child(2){
+    color: white;
+}
+
 @media (max-width: 375px){
     .container{
         grid-template-columns: 80vw;

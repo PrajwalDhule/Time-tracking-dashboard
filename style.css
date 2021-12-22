@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Rubik:wght@300;400;500&family=Ubuntu:wght@500&display=swap');
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -18,84 +20,236 @@
     --fs-title: 18px;
   }
 
-.screen{
+body{
+    background-color: var(--vd-blue);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Rubik';
 }
+
+/* .screen{
+    width: min(95%, 50rem);
+} */
 
 .container{
     display: grid;
     gap: 1.5rem;
-    width: min(95%, 70rem);
-    grid-auto-columns: 1fr;
-    grid-template-areas: 
-    'one'
-    'two'
-    'three'
-    'four'
-    'five'
-    'six'
-    'seven';
-    padding-block: 2rem;
+    grid-template-columns: repeat(4, 12rem);
     margin-inline: auto;
 }
 
-.all{
-    border-radius: 10px;
+.screen::before{
+    position: absolute;
+    content: '';
+    background-color: var(--vd-blue);
+    height: 20px;
+    width: 60rem;
+    margin-top: -20px;
+    z-index: 100;
+}
+.screen::after{
+    position: absolute;
+    content: '';
+    background-color: var(--vd-blue);
+    height: 20px;
+    width: 12rem;
+    margin-left: 40.5rem;
+    margin-top: calc(-12rem - 20px);
+    z-index: 100;
 }
 
-.all:nth-child(1){
-    grid-area: one;
+.all{
+    border-radius: 12px;
 }
-.all:nth-child(2){
-    grid-area: two;
+
+#second{
+    background-color: var(--work);
 }
-.all:nth-child(3){
-    grid-area: three;
+#third{
+    background-color: var(--play);
 }
-.all:nth-child(4){
-    grid-area: four;
+#fourth{
+    background-color: var(--study);
 }
-.all:nth-child(5){
-    grid-area: five;
+#fifth{
+    background-color: var(--exercise);
 }
-.all:nth-child(6){
-    grid-area: six;
+#sixth{
+    background-color: var(--social);
 }
-.all:nth-child(7){
-    grid-area: seven;
+#seventh{
+    background-color: var(--self-care);
 }
 
 .jeremy-img{
-    width: 30px;
+    width: 60px;
     border-radius: 50%;
     border: 1px solid white;
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
+
+.one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+    color: white;
+}
+
+.two{
+    color: white;
+    margin: 0 0 0 1.5rem;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.three{
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    color: var(--pale-blue);
+    font-size: 0.75rem;
+}
+
+.dot{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.short{
+    height: 12rem;
 }
 
 .long{
     background-color: var(--d-blue);
+    grid-row: 1/ span 2;
 }
 
 .long-top{
-    height: 60%;
     background-color: var(--long);
     border-radius: 10px;
+    height: 67%;
 }
 .long-bottom{
+    display: flex;
     background-color: var(--d-blue);
+    flex-direction: column;
+    justify-content: center;
+    height: 33%;
+    border-radius: 10px;
+}
+
+.short-top{
+    border-radius: 10px 10px 0 0;
+    height: 20%;
+}
+
+.short-bottom{
+    height: 80%;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--d-blue);
+    z-index: 1;
+}
+
+.report{
+    margin-top: 2rem;
+    margin-bottom: -0.05rem;
+    font-size: 0.7rem;
+    color: var(--pale-blue);
+}
+
+.long-top p{
+    margin-left: 1.2rem;
+}
+
+.long-bottom p{
+    margin-left: 1.2rem;
     margin-bottom: 0;
-    height: 40%;
+    color: var(--ds-blue);
+}
+
+.jeremy-text{
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-weight: 300;
+}
+
+.icon{
+    z-index: 0;
+}
+
+.icon1, .icon2, .icon3{
+    width: 3.75rem;
+    margin-left: 7rem;
+    margin-top: -0.2rem;
+}
+
+.icon4, .icon5{
+    width: 4rem;
+    margin-left: 7rem;
+}
+
+.icon1{
+    margin-top: -0.3rem;
+}
+
+.icon6{
+    margin-top: -0.5rem;
+    margin-left: 7.5rem;
+    width: 3.5rem;
+}
+
+.icon-bg-1{
+    background-color: var(--work);
+}
+.icon-bg-2{
+    background-color: var(--play);
+}
+.icon-bg-3{
+    background-color: var(--study);
+}
+.icon-bg-4{
+    background-color: var(--exercise);
+}
+.icon-bg-5{
+    background-color: var(--social);
+}
+.icon-bg-6{
+    background-color: var(--self-care);
 }
 
 .daily{
     margin-top: 0;
 }
 
-@media (min-width: 40em) {
-    .container {
-        grid-template-areas:
-        "one two three four"
-        "one five six seven";
+.long-bottom p:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.dot img:hover{
+    filter: brightness(100);
+    cursor: pointer;
+}
+
+.short-bottom:hover{
+    background-color: var(--ds-blue);
+    cursor: pointer;
+}
+
+@media (max-width: 375px){
+    .container{
+        grid-template-columns: 80vw;
     }
-  }
+    body{
+        width: 100vw;
+    }
+}

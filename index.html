@@ -24,9 +24,9 @@
           <p class="jeremy-text">Jeremy Robson</p>
         </div>
         <div class="long-bottom">
-          <a href="#" onclick="dailyStats()" class="daily">Daily</a>
-          <a href="#" onclick="weeklyStats()" class="weekly">Weekly</a>
-          <a href="#" onclick="monthlyStats()" class="monthly">Monthly</a>
+          <a href="#" onclick="dailyStats()" class="daily" id="d">Daily</a>
+          <a href="#" onclick="weeklyStats()" class="weekly" id="w">Weekly</a>
+          <a href="#" onclick="monthlyStats()" class="monthly" id="m">Monthly</a>
         </div>
       </div>
       <div class="all short" id="second">
@@ -109,13 +109,15 @@
       </div>
     </div>
   </div>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  <div class="attribution">
+    <span>Challenge by </span><a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor
+    </a>.
+    <span>Coded by </span><a href="https://github.com/PrajwalDhule/time-tracking-dashboard" target="_blank">Prajwal
+      Dhule</a>.
+  </div>
   <script>
     "use strict";
-    function dailyStats(){
+    function dailyStats() {
       document.getElementById("current1").innerHTML = "5hrs";
       document.getElementById("previous1").innerHTML = "Last Week - 7hrs";
       document.getElementById("current2").innerHTML = "1hr";
@@ -128,8 +130,11 @@
       document.getElementById("previous5").innerHTML = "Last Week - 3hrs";
       document.getElementById("current6").innerHTML = "0hrs";
       document.getElementById("previous6").innerHTML = "Last Week - 1hr";
+      document.getElementById("d").style.color = "white";
+      document.getElementById("w").style.color = "hsl(235, 45%, 61%)";
+      document.getElementById("m").style.color = "hsl(235, 45%, 61%)";
     }
-    function weeklyStats(){
+    function weeklyStats() {
       document.getElementById("current1").innerHTML = "32hrs";
       document.getElementById("previous1").innerHTML = "Last Week - 36hrs";
       document.getElementById("current2").innerHTML = "10hrs";
@@ -142,8 +147,11 @@
       document.getElementById("previous5").innerHTML = "Last Week - 10hrs";
       document.getElementById("current6").innerHTML = "2hrs";
       document.getElementById("previous6").innerHTML = "Last Week - 2hrs";
+      document.getElementById("w").style.color = "white";
+      document.getElementById("d").style.color = "hsl(235, 45%, 61%)";
+      document.getElementById("m").style.color = "hsl(235, 45%, 61%)";
     }
-    function monthlyStats(){
+    function monthlyStats() {
       document.getElementById("current1").innerHTML = "103hrs";
       document.getElementById("previous1").innerHTML = "Last Week - 128hrs";
       document.getElementById("current2").innerHTML = "23hrs";
@@ -156,6 +164,9 @@
       document.getElementById("previous5").innerHTML = "Last Week - 23hrs";
       document.getElementById("current6").innerHTML = "7hrs";
       document.getElementById("previous6").innerHTML = "Last Week - 11hrs";
+      document.getElementById("m").style.color = "white";
+      document.getElementById("d").style.color = "hsl(235, 45%, 61%)";
+      document.getElementById("w").style.color = "hsl(235, 45%, 61%)";
     }
   </script>
 </body>

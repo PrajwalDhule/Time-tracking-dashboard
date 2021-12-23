@@ -82,7 +82,7 @@ body{
 .jeremy-img{
     width: 60px;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 2.5px solid white;
     margin-top: 2em;
     margin-left: 1.2em;
 }
@@ -237,10 +237,6 @@ body{
     cursor: pointer;
 }
 
-.long-bottom a::selection{
-    color: white;
-}
-
 .dot img:hover{
     filter: brightness(100);
     cursor: pointer;
@@ -281,11 +277,123 @@ body{
     color: white;
 }
 
-@media (max-width: 375px){
+@media (max-width: 376px){
+    .bar{
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 80vw;
+        background-color: var(--vd-blue);
+    }
+    .bar1{
+        top:282px;
+    }
+    .bar2{
+        top:441px;
+    }
+    .bar3{
+        top:601px;
+    }
+    .bar4{
+        top:921px;
+    }
+    .bar5{
+        top:1081px;
+    }
     .container{
         grid-template-columns: 80vw;
     }
     body{
         width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .long{
+        height: fit-content;
+        block-size: fit-content;
+    }
+    .long-top{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    .jeremy-img{
+        grid-row: 1/ span 2;
+        margin: 5vh 0 5vh 4vh;
+    }
+    .report{
+        font-size: 3.2vw;
+        transform: translateY(13px);
+    }
+    .jeremy-text{
+        font-size: 5.25vw;
+        transform: translateY(-15px);
+    }
+    .long-bottom{
+        display: flex;
+        flex-direction: row;
+        height: 8vh;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5vh;
+    }
+    .long-bottom a{
+        margin: 0;
+    }
+    .short{
+        height: 20vh;
+    }
+    .short-bottom{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .one{
+        grid-column: 1/ span 2;
+    }
+    .field, .two, .three{
+        display: flex;
+        align-items: center;
+    }
+    .two{
+        font-size: 7.5vw;
+    }
+    .two, .three{
+        height: 5vh;
+        margin-top: -2vh;
+        margin-bottom: 0;
+    }
+    .screen::before, .screen::after{
+        height: 0;
+        width: 0;
+    }
+    .screen{
+        margin: 12vh 0;
+    }
+    
+    .icon1, .icon2, .icon3{
+        width: 3.75rem;
+        margin-left: 13rem;
+        margin-top: -0.2rem;
+    }
+    
+    .icon4, .icon5{
+        width: 4rem;
+        margin-left: 12.75rem;
+    }
+    
+    .icon1{
+        margin-top: -0.3rem;
+    }
+    
+    .icon5{
+        margin-top: -0.8rem;
+    }
+    
+    .icon6{
+        margin-top: -0.5rem;
+        margin-left: 13.5rem;
+        width: 3.5rem;
+    }
+    .attribution{
+        top: 187vh;
     }
 }
